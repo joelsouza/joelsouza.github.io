@@ -1,57 +1,43 @@
+import Head from 'next/head'
 import Image from 'next/image'
-import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
+    <article>
+      <Head>
+        <meta name="theme-color" content="#1c2321ff" />
+      </Head>
+      <section className="hero">
+        <header>
+          <h1>Hi, I&apos;m Joel</h1>
+          <p>
+            a passionate full-stack developer from Brazil.{' '}
+            <span>I know Ruby and how to play guitar.</span>{' '}
+            <span>I can write NodeJS and React, and how to <a href="https://www.strava.com/athletes/56494818" target='_blank'>run</a> 21km in ~1h30min.</span>{' '}
+            <span>I am currently learning Elixir and having fun with <a href="https://photos.app.goo.gl/t6jCZbLi894TkZj89" target='_blank'>my family</a>, work, and stay focused with so many noise.</span>
+          </p>
+        </header>
+      </section>
+      <section className="intro">
+        <div className="container mx-auto">
+          <div className="bio">
+            <p>
+              I had basically become the person whose life I had dreamed of living as a teenager.
+            </p>
+            <p>
+              <a href="https://photos.app.goo.gl/WbgTh1NpHeff8Q7F9" target='_blank'>Since 2007</a>, I have been employed as a web developer.
+              I had started my career trying to make PNG alpha channel work on IE6 at the beginning of the second browser. At that time, I was following <a href="https://www.webstandards.org/" target='_blank'> the Web Standards</a> best practices, and in 2017 started my journey as a remote developer on <a href="https://drl.io/play" target='_blank'>Drone Racing Simulator</a> project.
+            </p>
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+      </section>
+      <section className="photo">
+        <div className="container mx-auto">
+          <figure className="relative">
+            <Image src={'/me.jpg'} width={550} height={1142} alt="Joel Souza" />
+          </figure>
+        </div>
+      </section>
+    </article>
   )
 }
